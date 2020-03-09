@@ -11,16 +11,6 @@
 
 <body>
 
-  <div id="container">
-    <div id="theTarget">
-      <div class="image1"></div>
-      <div class="image2"></div>
-      <div class="image3"></div>
-      <div class="image4"></div>
-      <div class="image5"></div>
-    </div>
-  </div>
-
   <header>
 
     <% if user_signed_in? %>
@@ -57,6 +47,15 @@
 
     <% end %>
   </header>
+    <div id="container">
+    <div id="theTarget">
+      <div class="image1"></div>
+      <div class="image2"></div>
+      <div class="image3"></div>
+      <div class="image4"></div>
+      <div class="image5"></div>
+    </div>
+  </div>
   <%= yield %>
   <footer class="footer-text">
     <p>CopyRight Infratop.inc</p>
