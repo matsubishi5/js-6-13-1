@@ -1,0 +1,38 @@
+<div class="containe">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<h1>User info</h1>
+
+			<% if @user.errors.any? %>
+			<h2><%= @user.errors.count %>error</h2>
+			<div>
+				<ul>
+					<% @user.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+			<% end %>
+
+			<%= form_for(@user) do |f| %>
+
+			<p>
+				<span>Name</span>
+				<span><%= f.text_field :name %></span>
+			</p>
+
+			<p><%= f.attachment_field :profile_image %></p>
+
+			<p>
+				<span>Introduction</span>
+				<span><%= f.text_area :introduction %></span>
+			</p>
+
+			<p><%= f.submit "Update User" %></p>
+
+			<% end %>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+</div>
